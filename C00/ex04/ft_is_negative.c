@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*   ft_putchar                                           :::      ::::::::   */
-/*                                                      :+:      :+:    :+:   */
+/*                                                        :::      ::::::::   */
+/*   ft_is negative                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: k-pires  <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,13 +12,23 @@
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void    ft_is_negative(int n)
 {
-	write(1, &c, 1);
+        if (n < 0)
+        {
+                write(1, "N", 1);
+        }
+        else
+        {
+                write(1, "P", 1);
+        }
 }
 
-int	main(void)
+int     main(void)
 {
-	ft_putchar('k');
-	return(0);
+        ft_is_negative(-5);
+        ft_is_negative(0);
+        ft_is_negative(9);
+        return (0);
 }
+

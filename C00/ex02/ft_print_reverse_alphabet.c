@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*   ft_putchar                                           :::      ::::::::   */
-/*                                                      :+:      :+:    :+:   */
+/*                                                        :::      ::::::::   */
+/*   ft_print_reverse_alphabet                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: k-pires  <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,13 +12,20 @@
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_print_reverse_alphabet(void)
 {
-	write(1, &c, 1);
+	char	letter;
+
+	letter = 'z';
+	while (letter >= 'a')
+	{	
+		write(1, &letter, 1);
+		letter--;
+	}
 }
 
 int	main(void)
 {
-	ft_putchar('k');
-	return(0);
+	ft_print_reverse_alphabet();
+	return (0);
 }

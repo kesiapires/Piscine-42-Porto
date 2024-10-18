@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*   ft_putchar                                           :::      ::::::::   */
-/*                                                      :+:      :+:    :+:   */
+/*                                                        :::      ::::::::   */
+/*   ft_print_numbers                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: k-pires  <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,13 +12,20 @@
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_print_numbers(void)
 {
-	write(1, &c, 1);
+	char	num;
+
+	num = '0';
+	while (num <= '9')
+	{
+		write(1, &num, 1);
+		num++;
+	}
 }
 
 int	main(void)
 {
-	ft_putchar('k');
-	return(0);
+	ft_print_numbers();
+	return (0);
 }

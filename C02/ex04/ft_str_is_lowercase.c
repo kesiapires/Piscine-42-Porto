@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 int	ft_str_is_lowercase(char *str)
 {
 	if (*str == '\0')
@@ -19,8 +21,17 @@ int	ft_str_is_lowercase(char *str)
 		if (*str > 'A' && *str < 'Z')
 		{
 			return (0);
-			str++;
 		}
-		return (1);
+		str++;
+	}
+	return (1);
+}
+int	main(void)
+{
+	char	text[] = "";
+
+	printf("%i\n", ft_str_is_lowercase(text));
+	return (0);
+}
 	
 
